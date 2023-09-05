@@ -1,18 +1,11 @@
-function solution(binomial) {
-    let answer;
+const ops = {
+    '+': (a,b) => a + b,
+    '-': (a,b) => a - b,
+    '*': (a,b) => a * b,
+}
+
+const solution = (binomial) => {
+    const [a, op, b] = binomial.split(' ');
     
-    const arr = binomial.split(' ');
-    switch (arr[1]) {
-        case '+': 
-            answer = +arr[0] + +arr[2]
-            break;
-        case '-':
-            answer = +arr[0] - +arr[2]
-            break;
-        case '*':
-            answer = +arr[0] * +arr[2]
-            break;
-    }
-    
-    return answer
+    return ops[op](+a,+b)
 }
