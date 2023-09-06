@@ -22,7 +22,7 @@ function solution(date1, date2) {
 
 // 다른사람의 풀이
 const solution = (date1, date2) => {
-  return new Date(date1) < new Date(date2) ? 1 : 0;
+  return new Date(date1) < new Date(date2) ? 1 : 0; // 아 new Date() 왜 생각 못했냐... 바보
 };
 
 const solution = (date1, date2) => {
