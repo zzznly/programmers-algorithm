@@ -1,11 +1,7 @@
 function solution(arr, queries) {           
-    for (let i = 0; i < queries.length; i++) {
-        const [a,b] = queries[i]
-        
-        let temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
+    for (let [i,j] of queries) {
+        [arr[i], arr[j]] = [arr[j], arr[i]]
     }
     
-    return arr;
+    return arr
 }
