@@ -1,6 +1,6 @@
 function solution(rank, attendance) {
   const [a, b, c] = rank
-    .filter((_, i) => attendance[i] === true)
+    .filter((_, i) => attendance[i])
     .sort((a, b) => a - b)
     .map(v => rank.indexOf(v));
 
