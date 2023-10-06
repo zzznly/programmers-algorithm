@@ -1,9 +1,3 @@
-function solution(array) {
-    let cnt = 0;
-    
-    array.join('').split('').forEach(v => {
-        if (+v === 7) cnt++;
-    })
-    
-    return cnt;
+function solution(array) {    
+    return array.join().split('').filter(v => +v === 7).length;
 }
