@@ -1,6 +1,5 @@
 function solution(emergency) {
-    const org = [...emergency]
-    const sort = [...emergency.sort((a,b) => b-a)]
+    const sorted = [...emergency].sort((a,b) => b-a)
     
-    return org.map(v => sort.indexOf(v) + 1)
+    return emergency.map(v => sorted.indexOf(v) + 1)
 }
